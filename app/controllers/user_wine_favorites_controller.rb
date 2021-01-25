@@ -1,0 +1,2 @@
+class UserWineFavoritesController < ApplicationController
+end
