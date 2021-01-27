@@ -26,10 +26,16 @@ Wine.create(name: "O Poulo 2019 La Perdida", classification: "Red", year: 2019, 
 Wine.create(name: "The Electric Chardonnay Acid Test 2019 Brand", classification: "White", year: 2019, varietal: "Chardonnay, Riesling", review: "This is the anti-Chardonnay, Chardonnay!", image_url: "https://cdn.shopify.com/s/files/1/0011/8148/3072/products/the-electric-chardonnay-acid-test-brand-natural-white-wine-pfalz-germany-front_1512x.jpg?v=1611148576")
 
 Occasion.create(vibe: "Me time", user_id: 1, wine_id: 1)
-Occasion.create(vibe: "Party", user_id: 2, wine_id: 2)
-Occasion.create(vibe: "TGIFF", user_id: 3, wine_id: 3)
-Occasion.create(vibe: "Feast", user_id: 4, wine_id: 4)
-Occasion.create(vibe: "Afternoon Delight", user_id: 5, wine_id: 5)
+
+
+# Occasion.create(vibe: "Party", user_id: 2, wine_id: 2)
+# Occasion.create(vibe: "TGIFF", user_id: 3, wine_id: 3)
+# Occasion.create(vibe: "Feast", user_id: 4, wine_id: 4)
+# Occasion.create(vibe: "Day Drinking", user_id: 5, wine_id: 5)
+
+Occasion.create(vibe: "Party", user_id: 1, wine_id: 2)
+
+
 
 Food.create(pairing: "chicken", wine_id: 1)
 Food.create(pairing: "beef", wine_id: 2)
