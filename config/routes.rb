@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :user_wine_favorites
   resources :foods
   resources :wines
-  resources :occasions
   resources :users
 
   # get '/wines', to: 'wines#index', as: 'wines'

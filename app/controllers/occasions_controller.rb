@@ -1,3 +1,0 @@
-class OccasionsController < ApplicationController
-
-end

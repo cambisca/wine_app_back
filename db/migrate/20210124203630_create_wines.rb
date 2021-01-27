@@ -7,6 +7,7 @@ class CreateWines < ActiveRecord::Migration[6.0]
       t.string :varietal
       t.string :review
       t.string :image_url
+      t.string :vibe
 
       t.timestamps
     end

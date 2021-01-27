@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 2021_01_25_201631) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "occasions", force: :cascade do |t|
-    t.string "vibe"
-    t.integer "user_id"
-    t.integer "wine_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "user_wine_favorites", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "wine_id", null: false
@@ -55,6 +47,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_201631) do
     t.string "varietal"
     t.string "review"
     t.string "image_url"
+    t.string "vibe"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
