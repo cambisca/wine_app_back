@@ -1,7 +1,11 @@
 class WinesController < ApplicationController
 
     def index
-      wines = Wine.all
+      if params[:vibe] == "undefined" || params[:vibe] == "All"
+        wines = Wine.all
+      else
+        wines = Wine.where(vibe: params[:vibe])
+      end
       render json: wines
     end
 
@@ -30,10 +34,10 @@ class WinesController < ApplicationController
       render json: wine
     end
 
-    def filterVibe
-      wines = Wine.where(vibe: params[:vibe])
-      render json: wines
-    end
+    # def filterVibe
+    #   wines = Wine.where(vibe: params[:vibe])
+    #   render json: wines
+    # end
 
     private
 

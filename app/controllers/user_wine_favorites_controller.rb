@@ -15,9 +15,8 @@ class UserWineFavoritesController < ApplicationController
     end
 
     def destroy
-      user_wine_favorite = UserWineFavorite.where(id: params[:id])
-      user_wine_favorite.destroy
-      render json: user_wine_favorite
+     UserWineFavorite.find(params[:id]).destroy
+      render json: {status: "DELETED"}
     end
 
     private
