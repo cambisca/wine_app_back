@@ -2,12 +2,15 @@ class UsersController < ApplicationController
   def index
     users = User.all
     render json: users
-  end 
+  end
 
-  def show 
+  def show
     user = User.find(params[:id])
 
-    render json: user 
-  end 
+    render json: user
+  end
+
+  
+
 
 end
