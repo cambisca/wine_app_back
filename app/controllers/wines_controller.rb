@@ -6,8 +6,13 @@ class WinesController < ApplicationController
     end
 
     def show
-      wine = Wine.find(params[:id])
-      render json: wine
+      if params[:id].to_i == 1
+        wine = Wine.first
+        render json: wine
+      else
+        wine = Wine.find(params[:id])
+        render json: wine
+      end
     end
 
     def new
@@ -23,6 +28,11 @@ class WinesController < ApplicationController
       wine = Wine.find(params[:id])
       wine.update(vibe: params[:vibe])
       render json: wine
+    end
+
+    def filterVibe
+      wines = Wine.where(vibe: params[:vibe])
+      render json: wines
     end
 
     private
