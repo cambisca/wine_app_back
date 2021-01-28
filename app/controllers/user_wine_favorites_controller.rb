@@ -1,5 +1,10 @@
 class UserWineFavoritesController < ApplicationController
 
+    def index 
+      user_wine_favorites = UserWineFavorite.all  
+      render json: user_wine_favorites
+    end 
+
     def show
       user_wine_favorite = UserWineFavorite.where(User_id: params[:id])
       render json: user_wine_favorite
