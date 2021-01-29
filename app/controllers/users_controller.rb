@@ -13,11 +13,11 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.update(varietal: params[:varietal])
     render json: user
-  end 
+  end
 
-  private 
+  private
 
-  def user_params 
+  def user_params
     params.require(:user).permit(:name, :username, :password, :age, :varietal)
-  end 
+  end
 end
