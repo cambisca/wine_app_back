@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_201631) do
     t.string "username"
     t.string "password"
     t.integer "age"
+    t.string "varietal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
