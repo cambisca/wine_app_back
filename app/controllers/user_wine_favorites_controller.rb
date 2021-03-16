@@ -24,5 +24,7 @@ class UserWineFavoritesController < ApplicationController
     def user_wine_params
       params.permit(:user_id, :wine_id)
     end
+
+    # test
 end
 
